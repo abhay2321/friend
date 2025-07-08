@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Mail, Phone, Send, Code, Palette, User, Briefcase, FolderOpen, MessageCircle, Menu, X, Sun, Moon } from 'lucide-react';
 import profileImage from '@/assets/ayushi-profile.jpg';
 import profile from '@/assets/ayushiv.png';
-import Contact from './contact'
+import Contact from './Contact'
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
