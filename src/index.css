@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Portfolio Design System - All colors, gradients, fonts, etc defined here */
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    /* Tech Purple/Blue Palette */
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 83% 68%;
+    
+    /* Secondary Tech Colors */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 18%;
+    
+    /* Accent Colors */
+    --accent: 262 100% 88%;
+    --accent-foreground: 262 83% 24%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    
+    /* Muted Colors */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    /* Utility Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    /* Design System Extensions */
+    --hero-gradient: linear-gradient(135deg, hsl(262 83% 58%), hsl(242 83% 65%));
+    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+    --skill-gradient: linear-gradient(135deg, hsl(262 100% 88%), hsl(242 100% 90%));
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 25px -5px hsl(262 83% 58% / 0.1), 0 10px 10px -5px hsl(262 83% 58% / 0.04);
+    --shadow-card: 0 4px 6px -1px hsl(220 13% 69% / 0.1), 0 2px 4px -1px hsl(220 13% 69% / 0.06);
+    --shadow-glow: 0 0 40px hsl(262 83% 68% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core Dark Colors */
+    --background: 220 13% 9%;
+    --foreground: 0 0% 95%;
+
+    /* Tech Purple/Blue Dark Palette */
+    --primary: 262 83% 65%;
+    --primary-foreground: 220 13% 9%;
+    --primary-glow: 262 83% 75%;
+    
+    /* Secondary Dark Colors */
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    /* Accent Dark Colors */
+    --accent: 262 50% 25%;
+    --accent-foreground: 262 100% 88%;
+    
+    /* Surface Dark Colors */
+    --card: 220 13% 12%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 220 13% 12%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Muted Dark Colors */
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+    
+    /* Utility Dark Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 262 83% 65%;
+
+    /* Dark Mode Design Extensions */
+    --hero-gradient: linear-gradient(135deg, hsl(262 83% 65%), hsl(242 83% 70%));
+    --card-gradient: linear-gradient(145deg, hsl(220 13% 12%), hsl(220 13% 15%));
+    --skill-gradient: linear-gradient(135deg, hsl(262 50% 25%), hsl(242 50% 30%));
+    
+    /* Dark Shadows */
+    --shadow-elegant: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(262 83% 75% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+  
+  /* Card Gradients */
+  .card-gradient {
+    background: var(--card-gradient);
+  }
+  
+  .skill-gradient {
+    background: var(--skill-gradient);
+  }
+  
+  /* Shadow Utilities */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Animation Utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-2 hover:shadow-elegant;
+  }
+  
+  .hover-glow {
+    @apply transition-smooth hover:shadow-glow;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+}
